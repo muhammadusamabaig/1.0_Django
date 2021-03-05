@@ -1,0 +1,40 @@
+{% extends 'cor/base.html' %}
+{% load static %}
+{% block head %}
+
+<div class="col-md-2 d-block border-right border-warning">
+          <div class=" h-100">
+            <div class="text-center">
+              <img
+                src="{% static 'cor/images/man.JPG ' %}"
+                class="image-fluid rounded-circle mt-3"
+                width="100px"
+                height="110px"
+                alt="profile_pic"
+              />
+              <h4 class="text-white mt-4" style="font-family: 'Satisfy', cursive">Muhammad Usama Baig</h4>
+              <hr class="border-white" />
+            </div>
+
+            
+            <nav>
+            {% include 'cor/sidebare.html' with contact=contact%}
+            {% include 'cor/navbar.html' %}
+            </nav>
+          </div>
+        </div>
+{% endblock head %}
+
+
+{% block content %}
+<div class="container-fluid">
+<div class="container">
+<div class="mt-5 border-bottom">
+<h3 class="text-warning ">Contact</h3>
+</div>
+
+{% include 'cor/contact_form.html' %}
+</div>
+</div>
+{% endblock content %}
+    
