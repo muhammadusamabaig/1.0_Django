@@ -29,8 +29,7 @@ urlpatterns = [
 
         path('serv/',include('services.urls'),name="services"),
         path('edu/',include('education.urls'),name="education"),
-        url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-        url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+        
 
 
 
